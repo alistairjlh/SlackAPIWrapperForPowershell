@@ -1,1 +1,1 @@
-# SlackAPIWrapperForPowershell
+# Slack API Wrapper For Powershell
