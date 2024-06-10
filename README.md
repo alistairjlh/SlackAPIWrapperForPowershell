@@ -14,3 +14,10 @@ $query.Add('text', $message)
 
 $messageResponse = $slack.SendCommand("chat.postMessage", $query)
 ```
+
+## Manually Setting Limiter Rate for Specific Command
+```
+$token = 'xoxb-XXXXX'
+[SlackAPIWrapper]$slack= [SlackAPIWrapper]::new($token) 
+$slack.Limiters.Add("conversations.history", [SlackAPILimiter]::new([SlackRateLimits]::Tier3) )
+```
